@@ -1,0 +1,413 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FabricCo - Premium Fabric Manufacturer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Roboto&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">                                                      
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="threads">
+      <div class="thread t1"></div>
+      <div class="thread t2"></div>
+      <div class="thread t3"></div>
+      <div class="thread t4"></div>
+    </div>
+    <h1 class="weave-text">FabricCo</h1>
+  </div>
+<!-- NAVIGATION -->
+ <nav class="navbar">*
+  <div class="nav-container">
+    <div class="logo">FabricCo</div>
+    <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#customizer">Customizer</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#section-wrapper">Contact</a></li>
+    </ul>
+  </div>
+</nav><!-- HERO SECTION --><header class="hero">
+  <div class="overlay-bg"></div>  <div class="fabric-pngs">
+    <img src="fabric1.png" class="fabric-img fabric1" alt="">
+    <img src="fabric2.png" class="fabric-img fabric2" alt="">
+    <img src="fabric3.png" class="fabric-img fabric3" alt="">
+  </div>  <div class="hero-content">
+    <h1 class="hero-title">Weaving Dreams Into Reality</h1>
+    <p class="subtitle">Where craftsmanship meets culture</p>
+    <a href="#customizer" class="cta-btn">Customize Now</a>
+  </div>
+</header><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  </header> 
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="text-box">
+          <h2>About Us</h2>
+          <p>
+            FabricCo is a heritage-rich fabric manufacturing company rooted in traditional craftsmanship and innovation.  
+            We specialize in sustainable cotton, luxurious silk, breathable linen, and versatile synthetics — woven with precision and passion.
+          </p>
+        </div>
+        <div class="img-box">
+          <img src="https://media.istockphoto.com/id/500183418/photo/machine-shop.jpg?s=612x612&w=0&k=20&c=B8tprZZWGTnNHPSSAOBeg_Gay5ioW28skPBC583PFsY=" alt="Factory Interior" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Products Carousel Section -->
+  <section id="products" class="section dark">
+    <div class="container">
+      <h2>Our Fabrics</h2>
+      <div class="carousel-container">
+        <button class="nav prev" onclick="prevSlide()">&#10094;</button>
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-card">
+            <img src="https://media.istockphoto.com/id/1355125086/photo/indian-handloom-sarees-with-vibrant-colours-and-beautiful-designs.jpg?s=612x612&w=0&k=20&c=zoF_CAMr-eijNWjVvDp2nzTZ4m13yP9t3YDgn5rbH6w=" alt="Cotton" />
+            <h3>Cotton</h3>
+            <p>Soft, breathable, eco-friendly. Ideal for daily wear.</p>
+          </div>
+          <div class="carousel-card">
+            <img src="https://media.istockphoto.com/id/105680592/photo/indian-scarves-in-many-colors-for-display.jpg?s=612x612&w=0&k=20&c=eGIl-xZv6K7miZSCQjvezFqSoas3H6uVZ4OR7cAhDxs=" alt="Silk" />
+            <h3>Silk</h3>
+            <p>Elegant sheen and luxury for timeless fashion.</p>
+          </div>
+          <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1590566996911-2d82c6b7e585?w=500&auto=format&fit=crop&q=60" alt="Linen" />
+            <h3>Linen</h3>
+            <p>Natural texture, strength, and cool comfort.</p>
+          </div>
+          <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+                    <div class="carousel-card">
+            <img src="https://images.unsplash.com/photo-1644483518975-1a74bff3ab94?w=500&auto=format&fit=crop&q=60" alt="Synthetic" />
+            <h3>Synthetics</h3>
+            <p>Durable, flexible, and easy-care performance.</p>
+          </div>
+        </div>
+        <button class="nav next" onclick="nextSlide()">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+ 
+
+
+  <!-- Fabric Customizer Section -->
+  <section id="customizer" class="section">
+    <div class="container2">
+      <h2>🧵 Fabric Customizer</h2>
+
+      <form id="fabricForm" class="customizer-form">
+        <div class="form-group">
+          <label for="type">Select Fabric:</label>
+          <select id="type">
+            <option value="Cotton">Cotton</option>
+            <option value="Silk">Silk</option>
+            <option value="Linen">Linen</option>
+            <option value="Synthetic">Synthetic</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="color">Choose Color:</label>
+          <input type="color" id="color" />
+          <div id="color-box"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="pattern">Upload Pattern (optional):</label>
+          <input type="file" id="pattern" accept="image/*" />
+        </div>
+
+        <button type="button" class="custom-btn" onclick="previewFabric()">✨ Preview</button>
+      </form>
+
+      <div id="preview-gallery" class="gallery-block"></div>
+    </div>
+  </section>
+
+
+  <!-- Process Timeline --> 
+   <section id="process" class="section dark">
+  <div class="container" style="text-align: center;">
+    <h2>Our Manufacturing Journey</h2>
+    <ul class="process">
+      <li onclick="openVideo('raw')">Raw Material </li>
+      <li onclick="openVideo('carding')">Carding & Spinning</li>
+      <li onclick="openVideo('weaving')">Warping & Weaving</li>
+      <li onclick="openVideo('dyeing')">Dyeing & Printing</li>
+      <li onclick="openVideo('finishing')">Finishing Touches</li>
+      <li onclick="openVideo('packaging')">Packaging</li>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeVideo()">&times;</span>
+      <video id="stepVideo" width="100%" controls autoplay>
+        <source src="" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+  </section>  <!-- Contact Section -->
+    <section id="section-wrapper">
+        <div class="box-wrapper">
+            <div class="info-wrap">
+                <h2 class="info-title">Contact Information</h2>
+                <h3 class="info-sub-title">Fill up the form and our Team will get back to you within 24 hours</h3>
+                <ul class="info-details">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>Phone:</span> <a href="tel:+ 1235 2355 98">+ 1235 2355 98</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Email:</span> <a href="">Fabrico@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-globe"></i>
+                        <span>Website:</span> <a href="#">Fabrico.com</a>
+                    </li>
+                </ul>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="form-wrap">
+                <form action="#" method="POST">
+                    <h2 class="form-title">Send us a message</h2>
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" class="fname" placeholder="First Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="lname" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="email" placeholder="Mail">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="phone" placeholder="Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" placeholder="Write your message"></textarea>
+                        </div>
+                    </div>
+                    <input type="submit" value="Send Message" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+<section id="blog" class="section light">
+  <div class="container">
+    <h2>Latest From Our Journal</h2>
+    <div class="blog-grid">
+      <div class="blog-card">
+        <img src="https://media.istockphoto.com/id/156489322/photo/digital-textile-printing.webp?a=1&b=1&s=612x612&w=0&k=20&c=T7AufcOWXc2ArH8TBRnEp8RhlYGRlAij1SEfcUjENGc=" alt="Blog 1">
+        <div class="blog-content">
+          <h3>Art of Handwoven Threads</h3>
+          <p>Explore how traditional looms and artisan skills shape our fabrics into wearable legacies.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="https://media.istockphoto.com/id/543352720/photo/traditional-wool-dying.webp?a=1&b=1&s=612x612&w=0&k=20&c=okK6VmYWhUVlSRIn50gzASEqfPGkKMNyxc7o5hAxLow=" alt="Blog 2">
+        <div class="blog-content">
+          <h3>Technology in Fabric Making</h3>
+          <p>Discover how precision weaving machinery blends with tradition in our workshops.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1707994894479-d36c67b2613f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGFuZCUyMGxvb218ZW58MHx8MHx8fDA%3D" alt="Blog 3">
+        <div class="blog-content">
+          <h3>Sustainable Fashion Ideas</h3>
+          <p>Why our eco-conscious fabrics help create ethical, elegant, and lasting fashion.</p>
+          <a href="#">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section id="testimonials" class="section dark">
+  <div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-wrapper">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card">
+          <p>“Absolutely premium quality. I ordered custom silk, and it was flawless. Worth every rupee!”</p>
+          <h4>— Meera T., Mumbai</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>“FabricCo gives the traditional weaving a modern spirit. Loved the cotton blends!”</p>
+          <h4>— Arjun R., Chennai</h4>
+        </div>
+        <div class="testimonial-card">
+          <p>“Very responsive team and quick delivery. Their eco-friendly linen is now my favorite.”</p>
+          <h4>— Ayesha H., Hyderabad</h4>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+<!-- Footer -->
+<footer class="site-footer">
+  <!-- Bubbles -->
+  <div class="bubbles"></div>
+
+  <!-- Footer Content -->
+  <div class="footer-container">
+    <!-- Left Column -->
+    <div class="footer-column">
+      <h3>About FabricCo</h3>
+      <p>FabricCo is a heritage-rich fabric brand rooted in traditional craftsmanship and sustainability. We turn threads into timeless legacy.</p>
+    </div>
+
+    <!-- Middle Column -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#customizer">Customizer</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#section-wrapper">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right Column -->
+    <div class="footer-column">
+      <h3>Connect</h3>
+      <div class="social-icons2">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Text -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 FabricCo Pvt. Ltd. | Crafted with passion & precision.</p>
+  </div>
+
+  <!-- SVG Filter for Bubbles -->
+  <svg style="position: absolute; top: 100vh;">
+    <defs>
+      <filter id="blob">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  
+                  0 1 0 0 0  
+                  0 0 1 0 0  
+                  0 0 0 19 -9"
+          result="blob" />
+      </filter>
+    </defs>
+  </svg>
+</footer>
+
+    <script src="script.js"></script></body>
+</html>
