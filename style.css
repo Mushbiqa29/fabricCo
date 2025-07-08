@@ -32,6 +32,7 @@ width: 100vw;
   background: var(--text-light);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   z-index: 999;
+  box-shadow: 4px 4px 8px grey;
 }
 .nav-container {
   display: flex;
@@ -1124,6 +1125,16 @@ input[type="color"] {
     flex-direction: column;
     text-align:center;
 }
+.about-content img{
+  height: 110%;
+  position: relative;
+  bottom: 30%;
+}
+.box-wrapper{
+  width: 120% !important;
+  position: relative;
+  right: 10%;
+}
   .customizer-form {
     padding:20px;
 }
@@ -1170,7 +1181,8 @@ input[type="color"] {
     .form-group {
         flex: 1 1 100%;
         padding: 10px ;
-        margin: 0;
+        margin: 5;
+        padding: 30px;
     }
 
     .submit-button {
@@ -1178,7 +1190,8 @@ input[type="color"] {
         margin:20px0;
 }
 .customizer-form {
-    padding: 25px;
+    padding: 30px !important;
+ 
   }
 
   #fabric-box {
@@ -1188,6 +1201,15 @@ input[type="color"] {
 }
 .video-box{
   display: none;
+}
+.light{
+  position: relative;
+  bottom: 150px !important;
+}
+.bubble{
+ position: absolute;
+ bottom: -130px;
+ 
 }
 
 }
