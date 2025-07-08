@@ -114,33 +114,51 @@ function nextSlide() {
 }
 
 window.addEventListener('resize', updateCarousel);
-
-// Fabric Preview Tool
+// customizer
 function previewFabric() {
-  const type = document.getElementById('type').value;
-  const color = document.getElementById('color').value;
+  const colorPicker = document.getElementById('color');
   const patternInput = document.getElementById('pattern');
-  const gallery = document.getElementById('preview-gallery');
+  const previewBox = document.getElementById('fabric-box');
+  const modal = document.getElementById('preview-modal');
 
-  gallery.innerHTML = '';
-
-  const previewCard = document.createElement('div');
-  previewCard.className = 'preview-card';
-  previewCard.innerHTML = `<h4>${type}</h4><div class="color-block" style="background:${color}; height:100px; border-radius:5px;"></div>`;
+  const selectedColor = colorPicker.value;
+  previewBox.style.backgroundColor = selectedColor;
+  previewBox.style.backgroundImage = '';
+  previewBox.style.backgroundBlendMode = 'normal';
 
   if (patternInput.files && patternInput.files[0]) {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const img = document.createElement('img');
-      img.src = e.target.result;
-      img.className = 'pattern-img';
-      previewCard.appendChild(img);
-    };
-    reader.readAsDataURL(patternInput.files[0]);
+    const file = patternInput.files[0];
+    if (file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        previewBox.style.backgroundImage = `url(${e.target.result})`;
+        previewBox.style.backgroundRepeat = 'repeat';
+        previewBox.style.backgroundSize = 'contain';
+        previewBox.style.backgroundBlendMode = 'multiply';
+      };
+      reader.readAsDataURL(file);
+    } else {
+      alert("Please upload a valid image file.");
+    }
   }
 
-  gallery.appendChild(previewCard);
+  // Show modal
+  modal.style.display = 'flex';
 }
+
+// Close popup when ✖ is clicked
+document.getElementById('popup-close').addEventListener('click', function () {
+  const modal = document.getElementById('preview-modal');
+  modal.style.display = 'none';
+
+  // Optional: Reset preview when closing
+  document.getElementById('fabric-box').style.backgroundColor = '#eee';
+  document.getElementById('fabric-box').style.backgroundImage = 'none';
+  document.getElementById('pattern').value = '';
+  document.getElementById('color').value ='#ffffff';
+});
+
+
 const videoSources = {
   raw: "vedio1.mp4",
   carding: "vedio2.mp4",
@@ -151,33 +169,64 @@ const videoSources = {
 };
 
 function openVideo(step) {
-  const modal = document.getElementById("videoModal");
-  const video = document.getElementById("stepVideo");
-  const source = video.querySelector("source");
+  const sourceUrl = videoSources[step];
 
-  if (videoSources[step]) {
-    source.src = videoSources[step];
+  if (!sourceUrl) {
+    alert("Video not found.");
+    return;
+  }
+
+  if (window.innerWidth < 768) {
+    // Mobile view – Show modal
+    const modal = document.getElementById("videoModal");
+    const video = document.getElementById("stepVideo");
+    const source = video.querySelector("source");
+
+    source.src = sourceUrl;
     video.load();
-    modal.style.display = "block";
+    modal.style.display = "flex";
   } else {
-    alert("Video not found for this step.");
+    // Desktop view – Show video and hide placeholder
+    document.getElementById("video-placeholder").style.display = "none";
+    document.getElementById("video-player").style.display = "block";
+
+    const desktopVideo = document.getElementById("desktopVideo");
+    desktopVideo.src = sourceUrl;
+    desktopVideo.load();
+    desktopVideo.play();
   }
 }
 
-function closeVideo() {
+// Close mobile modal
+document.getElementById("popup-close2").addEventListener("click", function () {
   const modal = document.getElementById("videoModal");
   const video = document.getElementById("stepVideo");
   modal.style.display = "none";
   video.pause();
   video.currentTime = 0;
+});
+
+// Close desktop video and show placeholder again
+function closeDesktopVideo() {
+  document.getElementById("video-player").style.display = "none";
+  document.getElementById("video-placeholder").style.display = "flex";
+
+  const video = document.getElementById("desktopVideo");
+  video.pause();
+  video.currentTime = 0;
+  video.src = "";
 }
 
+// Optional: close mobile modal on outside click
 window.onclick = function (event) {
   const modal = document.getElementById("videoModal");
   if (event.target === modal) {
-    closeVideo();
+    modal.style.display = "none";
+    document.getElementById("stepVideo").pause();
+    document.getElementById("stepVideo").currentTime=0;
 }
 };
+
 const bubblesContainer = document.querySelector('.bubbles');
 
 for (let i = 0; i < 100; i++) {

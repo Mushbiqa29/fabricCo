@@ -181,13 +181,9 @@
     </div>
   </section>
 
- 
-
-
-  <!-- Fabric Customizer Section -->
-  <section id="customizer" class="section">
+  <section id="customizer" class="section" style="transform: scale(0.9);">
     <div class="container2">
-      <h2>🧵 Fabric Customizer</h2>
+      <h2> Fabric Customizer</h2>
 
       <form id="fabricForm" class="customizer-form">
         <div class="form-group">
@@ -203,7 +199,6 @@
         <div class="form-group">
           <label for="color">Choose Color:</label>
           <input type="color" id="color" />
-          <div id="color-box"></div>
         </div>
 
         <div class="form-group">
@@ -211,41 +206,63 @@
           <input type="file" id="pattern" accept="image/*" />
         </div>
 
-        <button type="button" class="custom-btn" onclick="previewFabric()">✨ Preview</button>
+        <button type="button" class="custom-btn" onclick="previewFabric()"> Preview</button>
       </form>
-
-      <div id="preview-gallery" class="gallery-block"></div>
     </div>
   </section>
 
-
-  <!-- Process Timeline --> 
-   <section id="process" class="section dark">
-  <div class="container" style="text-align: center;">
-    <h2>Our Manufacturing Journey</h2>
-    <ul class="process">
-      <li onclick="openVideo('raw')">Raw Material </li>
-      <li onclick="openVideo('carding')">Carding & Spinning</li>
-      <li onclick="openVideo('weaving')">Warping & Weaving</li>
-      <li onclick="openVideo('dyeing')">Dyeing & Printing</li>
-      <li onclick="openVideo('finishing')">Finishing Touches</li>
-      <li onclick="openVideo('packaging')">Packaging</li>
-    </ul>
+  <!-- Popup Preview Modal -->
+  <div id="preview-modal">
+    <div id="fabric-popup-box">
+      <span id="popup-close">✖</span>
+      <h3>Preview</h3>
+      <div id="fabric-box"></div>
+    </div>
   </div>
 
-  <!-- Modal -->
+<section id="process" class="section dark" >
+  <div class="container process-wrapper"style="transform: scale(0.9);">
+    <div class="process-steps">
+      <h2>Our Manufacturing Journey</h2>
+      <ul class="process">
+        <li onclick="openVideo('raw')">Raw Material</li>
+        <li onclick="openVideo('carding')">Carding & Spinning</li>
+        <li onclick="openVideo('weaving')">Warping & Weaving</li>
+        <li onclick="openVideo('dyeing')">Dyeing & Printing</li>
+        <li onclick="openVideo('finishing')">Finishing Touches</li>
+        <li onclick="openVideo('packaging')">Packaging</li>
+      </ul>
+    </div>
+
+    <!-- Desktop video placeholder and video box -->
+    <div class="video-display" id="desktop-video-container">
+      <div id="video-placeholder" class="video-box" style="position: relative;top: 20px; left: 30px;">
+        <p>🎬 Play video will appear here</p>
+      </div>
+      <div id="video-player" class="video-box" style="display: none;">
+        <span class="close close-desktop" onclick="closeDesktopVideo()">&times;</span>
+        <video id="desktopVideo" controls>
+          <source src="" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Modal -->
   <div id="videoModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeVideo()">&times;</span>
-      <video id="stepVideo" width="100%" controls autoplay>
+      <span class="close" id="popup-close2" >&times;</span>
+      <video id="stepVideo" controls autoplay>
         <source src="" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
   </div>
 </section>
-  </section>  <!-- Contact Section -->
-    <section id="section-wrapper">
+
+  <!-- Contact Section -->
+    <section id="section-wrapper" style="transform: scale(0.8);">
         <div class="box-wrapper">
             <div class="info-wrap">
                 <h2 class="info-title">Contact Information</h2>
